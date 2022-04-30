@@ -1,0 +1,4 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+# LFS (Large File Storage) like large size: 200MB, 300MB
+*.msi filter=lfs diff=lfs merge=lfs -text
