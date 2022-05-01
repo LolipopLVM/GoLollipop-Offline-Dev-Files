@@ -52,8 +52,9 @@ Lollipop: Offline credits:
 
 | Name               | Contribution                                                                                                                      |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------  |
-| RedBoi (D)         | Lollipop: Offline                                                                                                                 |
-| jaime. (D)         | Bug Fixer                                                                                                                         |
+| FlowLoop (D)         | Lollipop: Offline Project Lead
+                                                                                                                |
+| jaime. (D)         |Co-Project Lead Bug Fixer                                                                                                                         |
 | Abylm8or 2 (D) (B) | Beta Tester and mini dev                                                                                                          |
 | BlueMystery (D)    |  Possible fixes to TTS voices, Importing more things to the comedy world theme, Possibly actually the importer itself, Bug fixes. |
 |RubyWrapperCartoon(D)| Developer                                                                                                                        |
