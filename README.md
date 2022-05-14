@@ -36,31 +36,45 @@ While completely unnecessary, if you decide to use your freedom to change the so
 
 ## Credits
 **Please do not contact anyone on the list for support, use the Discord server.**
-
-Original Wrapper credits:
-| Name             | Contribution         |
-| ---------------- | -------------------- |
-| VisualPlugin (C) | GoAnimate Wrapper    |
-| xomdjl_ (D)      | Custom/Modded Assets |
-| CLarramore (D)   | Bug fixes            |
-| Poley Magik      | Asset Recreation     |
-
-Some members of the original team have asked to not be given credit, and they have been removed.
+Lollipop: Offline 
 
 Developers will have (D) on their name, to show they are officially working on Lollipop: Offline. Beta testers will have (B) on their name to show that they are beta testers for Lollipop: Offline. Contributors will have (C) on their name to show that they are making contributions to Lollipop: Offline by sharing some of their files with us. Everyone else has simply contributed something at some point.
 Lollipop: Offline credits:
 
-| Name               | Contribution                                                                                                                      |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------  |
-| FlowLoop (D)         | Lollipop: Offline Project Lead
-                                                                                                                |
-| jaime. (D)         |Co-Project Lead Bug Fixer                                                                                                                         |
-| Abylm8or 2 (D) (B) | Beta Tester and mini dev                                                                                                          |
+| Name             | Contribution         |
+| ---------------- | -------------------- |
+| FlowLoop (PL) | Project Lead   |
+| jaime. (VPL)      | Vice Project Lead & Bug Fixer |
+| MacoiAnimate (HoD)   | Head Of Development |
+| Abylm8or 2 (D) (B) | Beta Tester and mini dev |
 | BlueMystery (D)    |  Possible fixes to TTS voices, Importing more things to the comedy world theme, Possibly actually the importer itself, Bug fixes. |
-|RubyWrapperCartoon(D)| Developer                                                                                                                        |
-| MacoiAnimate (D)   | Developer                                                                                                                         |
+|RubyWrapperCartoon(D)| Developer |
 
 
+Original Wrapper, Wrapper offline, and unaffiliated credits:
+| Name         | Contribution         |
+| ------------ | -------------------- |
+| VisualPlugin | GoAnimate Wrapper    |
+| xomdjl_      | Horrible developer, fucking pedophile and just a bad person in general (https://docs.google.com/document/d/1o6PTmJ3Us1r4dGjX05Gj9QFDI6HHq0hdxfitaPssMag/edit)|
+| CLarramore   | Bug fixes            |
+| PoleyMagik   | Asset Store Archive  |
+| GoTest334 (PL)   | Current Project Lead                                   |
+| Benson (D)       | Wrapper: Offline                                       |
+| NathanSaturnBOI  | Logo                                                   |
+| Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
+| VisualPlugin     | Text to speech voices                                  |
+| creepyjokes2000  | Waveform fix, improved actions                         |
+| JoshAnimate      | Headgear fix                                           |
+| RegularSpark     | Fixing 1.2.3 to actually work, truncated themelist     |
+| KrisAnimate      | Chromium parameter                                     |
+| octanuary        | Traitor and overall retard                             |
+| PoleyMagik       | Client Modifications                                   |
+| Vyond              | Creators of the themes we love   |
+| http-party         | Creators of http-server          |
+| Stephan Brenner    | Creator of SilentCMD             |
+| vocatus            | Some of TronScript's batch code  |
+| ss64.com           | Incredible CMD info resource     |
+| robvanderwoude.com | Also amazing CMD info resource   |
 
 
 
