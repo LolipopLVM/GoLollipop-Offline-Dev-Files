@@ -1,4 +1,4 @@
-:: Lolipop: Offline Launcher
+:: Go!Lollipop Launcher
 :: Author: RedBoi/SilverStudios#0001
 :: License: MIT
 
@@ -23,7 +23,7 @@ goto metaavailable
 
 :metamissing
 if %NOMETA%==y (
-	title Lolipop: Offline [Metadata Missing]
+	title Go!Lollipop [Metadata Missing]
 	echo The metadata's missing for some reason?
 	echo Restoring...
 	goto metacopy
@@ -44,7 +44,7 @@ if %ADMIN%==n (
 :metaavailable
 
 :: Set title
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! [Initializing...]
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! [Initializing...]
 
 :: Make sure we're starting in the correct folder, and that it worked (otherwise things would go horribly wrong)
 pushd "%~dp0"
@@ -54,7 +54,7 @@ if not exist lolipop ( goto error_location )
 if not exist server ( goto error_location )
 goto noerror_location
 :error_location
-echo Doesn't seem like this script is in a Lolipop: Offline folder.
+echo Doesn't seem like this script is in a Go!Lollipop folder.
 pause && exit
 :noerror_location
 
@@ -82,7 +82,7 @@ if not exist "utilities\checks" md utilities\checks
 if not exist "utilities\checks\disclaimer.txt" (
 	echo DISCLAIMER
 	echo:
-	echo Lolipop: Offline is a project to preserve the original GoAnimate flash-based themes.
+	echo Go!Lollipop is a project to preserve the original GoAnimate flash-based themes.
 	echo We believe they should be archived for others to use and learn about in the future.
 	echo All business themes have been removed, please use Vyond Studio if you wish to get those.
 	echo This is still unlawful use of copyrighted material, but ^(in our opinion^) morally justifiable use.
@@ -91,17 +91,17 @@ if not exist "utilities\checks\disclaimer.txt" (
 	echo We do not wish to promote piracy, and we avoid distributing content that is still in use by GoAnimate Inc.
 	echo We have tried to reduce any harm we could do to GoAnimate Inc while making this project.
 	echo:
-	echo Excluding Adobe Flash and GoAnimate Inc's assets, Lolipop: Offline is free/libre software.
+	echo Excluding Adobe Flash and GoAnimate Inc's assets, Go!Lollipop is free/libre software.
 	echo You are free to redistribute and/or modify it under the terms of the MIT ^(aka Expat^) license,
 	echo except for some dependencies which have different licenses with slightly different rights.
 	echo Read the LICENSE file in Offline's base folder and the licenses in utilities/sourcecode for more info.
 	echo:
-	echo By continuing to use Lolipop: Offline, you acknowledge the nature of this project, and your right to use it.
-	echo If you object to any of this, feel free to close Lolipop: Offline now.
+	echo By continuing to use Go!Lollipop, you acknowledge the nature of this project, and your right to use it.
+	echo If you object to any of this, feel free to close Go!Lollipop now.
 	echo You will be allowed to accept 20 seconds after this message has appeared.
 	echo: 
 	PING -n 21 127.0.0.1>nul
-	echo If you still want to use Lolipop: Offline, press Y. If you no longer want to, press N.
+	echo If you still want to use Go!Lollipop, press Y. If you no longer want to, press N.
 	:disclaimacceptretry
 	set /p ACCEPTCHOICE= Response:
 	echo:
@@ -116,7 +116,7 @@ if not exist "utilities\checks\disclaimer.txt" (
 )
 
 :: Welcome, Director Ford!
-echo Lolipop: Offline
+echo Go!Lollipop
 echo An original project from VisualPlugin originally adapted by the W:O team
 echo Made by: RedBoi/SilverStudios#0001
 echo Version !LOLIPOP_VER!, build !LOLIPOP_BLD!
@@ -156,7 +156,7 @@ if !VERBOSELOLIPOP!==n (
 	echo:
 )
 
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! [Checking dependencies...]
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! [Checking dependencies...]
 
 :: Preload variables
 set NEEDTHEDEPENDERS=n
@@ -333,7 +333,7 @@ if !NEEDTHEDEPENDERS!==y (
 	goto skip_dependency_install
 )
 
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! [Installing dependencies...]
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! [Installing dependencies...]
 
 :: Preload variables
 set INSTALL_FLAGS=ALLUSERS=1 /norestart
@@ -360,12 +360,12 @@ if !ADMINREQUIRED!==y (
 			echo:
 			if !FLASH_DETECTED!==n (
 				if !NODEJS_DETECTED!==n (
-					echo Lolipop: Offline needs to install Flash and Node.js.
+					echo Go!Lollipop needs to install Flash and Node.js.
 				) else (
-					echo Lolipop: Offline needs to install Flash.
+					echo Go!Lollipop needs to install Flash.
 				)
 			) else (
-				echo Lolipop: Offline needs to install Node.js.
+				echo Go!Lollipop needs to install Node.js.
 			)
 			echo To do this, it must be started with Admin rights.
 			echo:
@@ -399,7 +399,7 @@ if !FLASH_DETECTED!==n (
 		echo or Trident.
 		echo:
 		echo If it's not based on either, then either
-		echo Lolipop: Offline will not be able to install Flash
+		echo Go!Lollipop will not be able to install Flash
 		echo or the Clean Flash Player won't work at all.
 		echo:
 		echo Unless you know what you're doing and have a
@@ -444,9 +444,9 @@ if !FLASH_DETECTED!==n (
 	)
 
 	:escape_browser_ask
-	echo To install Flash Player, Lolipop: Offline must kill any currently running web browsers.
+	echo To install Flash Player, Go!Lollipop must kill any currently running web browsers.
 	echo Please make sure any work in your browser is saved before proceeding.
-	echo Lolipop: Offline will not continue installation until you press a key.
+	echo Go!Lollipop will not continue installation until you press a key.
 	echo:
 	pause
 	echo:
@@ -474,7 +474,7 @@ if !FLASH_DETECTED!==n (
 		echo:
 		if not exist "utilities\installers\ChineseFlash-Patched-Win-34.0.0.155\install_flash_player.bat" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
-			echo A normal copy of Lolipop: Offline should come with one.
+			echo A normal copy of Go!Lollipop should come with one.
 			echo You may be able to get the installer here:
 			echo https://github.com/darktohka/clean-flash-builds/releases/tag/v1.6
 			echo Although Flash is needed, Offline will continue launching.
@@ -491,7 +491,7 @@ if !FLASH_DETECTED!==n (
 		echo Starting the Clean Flash Player installer...
 		if not exist "utilities\installers\ChineseFlash-Patched-Win-34.0.0.155\install_flash_player.bat" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
-			echo A normal copy of Lolipop: Offline should come with one.
+			echo A normal copy of Go!Lollipop should come with one.
 			echo You may be able to get the installer here:
 			echo https://github.com/darktohka/clean-flash-builds/releases/tag/v1.6
 			echo Although Flash is needed, Offline will continue launching.
@@ -508,7 +508,7 @@ if !FLASH_DETECTED!==n (
 		echo Starting the Clean Flash Player installer...
 		if not exist "utilities\installers\ChineseFlash-Patched-Win-34.0.0.155\install_flash_player.bat" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
-			echo A normal copy of Lolipop: Offline should come with one.
+			echo A normal copy of Go!Lollipop should come with one.
 			echo You may be able to get the installer here:
 			echo https://github.com/darktohka/clean-flash-builds/releases/tag/v1.6
 			echo Although Flash is needed, Offline will continue launching.
@@ -536,7 +536,7 @@ if !NODEJS_DETECTED!==n (
 		if !VERBOSELOLIPOP!==y ( echo 64-bit system detected, installing 64-bit Node.js. )
 		if not exist "utilities\installers\node_windows_x64.msi" (
 			echo We have a problem. The 64-bit Node.js installer doesn't exist.
-			echo A normal copy of Lolipop: Offline should come with one.
+			echo A normal copy of Go!Lollipop should come with one.
 			echo You should be able to find a copy on this website:
 			echo https://nodejs.org/en/download/
 			echo Although Node.js is needed, Offline will try to install anything else it can.
@@ -544,7 +544,7 @@ if !NODEJS_DETECTED!==n (
 			goto after_nodejs_install
 		)
 		echo Proper Node.js installation doesn't seem possible to do automatically.
-		echo You can just keep clicking next until it finishes, and Lolipop: Offline will continue once it closes.
+		echo You can just keep clicking next until it finishes, and Go!Lollipop will continue once it closes.
 		if !DRYRUN!==n ( msiexec /qn /i "utilities\installers\node_windows_x64.msi" !INSTALL_FLAGS! )
 		goto nodejs_installed
 	)
@@ -552,7 +552,7 @@ if !NODEJS_DETECTED!==n (
 		if !VERBOSELOLIPOP!==y ( echo 32-bit system detected, installing 32-bit Node.js. )
 		if not exist "utilities\installers\node_windows_x32.msi" (
 			echo We have a problem. The 32-bit Node.js installer doesn't exist.
-			echo A normal copy of Lolipop: Offline should come with one.
+			echo A normal copy of Go!Lollipop should come with one.
 			echo You should be able to find a copy on this website:
 			echo https://nodejs.org/en/download/
 			echo Although Node.js is needed, Offline will try to install anything else it can.
@@ -560,7 +560,7 @@ if !NODEJS_DETECTED!==n (
 			goto after_nodejs_install
 		)
 		echo Proper Node.js installation doesn't seem possible to do automatically.
-		echo You can just keep clicking next until it finishes, and Lolipop: Offline will continue once it closes.
+		echo You can just keep clicking next until it finishes, and Go!Lollipop will continue once it closes.
 		if !DRYRUN!==n ( msiexec /qn /i "utilities\installers\node_windows_x32.msi" !INSTALL_FLAGS! )
 		goto nodejs_installed
 	)
@@ -568,7 +568,7 @@ if !NODEJS_DETECTED!==n (
 		echo:
 		echo Well, this is a little embarassing.
 		echo:
-		echo Lolipop: Offline can't tell if you're on a 32-bit or 64-bit system.
+		echo Go!Lollipop can't tell if you're on a 32-bit or 64-bit system.
 		echo Which means it doesn't know which version of Node.js to install...
 		echo:
 		echo If you have no idea what that means, press 1 to just try anyway.
@@ -585,8 +585,8 @@ if !NODEJS_DETECTED!==n (
 		if "!cpuchoice!"=="1" if !DRYRUN!==n ( msiexec /qn /i "utilities\installers\node_windows_x32.msi" !INSTALL_FLAGS! ) && if !VERBOSELOLIPOP!==y ( echo Attempting 32-bit Node.js installation. ) && goto nodejs_installed
 		if "!cpuchoice!"=="2" (
 			echo:
-			echo Press 1 if you're running Lolipop: Offline on a 32-bit system.
-			echo Press 2 if you're running Lolipop: Offline on a 64-bit system.
+			echo Press 1 if you're running Go!Lollipop on a 32-bit system.
+			echo Press 2 if you're running Go!Lollipop on a 64-bit system.
 			echo:
 			:whatsystemreask
 			set /p WHATSYSTEM= Response:
@@ -634,7 +634,7 @@ if !HTTPSERVER_DETECTED!==n (
 			echo:
 			if not exist "utilities\installers\http-server-master" (
 				echo Well, we'd try that if the files existed.
-				echo A normal copy of Lolipop: Offline should come with them.
+				echo A normal copy of Go!Lollipop should come with them.
 				echo You should be able to find a copy on this website:
 				echo https://www.npmjs.com/package/http-server
 				echo Although http-server is needed, Offline will try to install anything else it can.
@@ -664,7 +664,7 @@ if !HTTPSERVER_DETECTED!==n (
 		color cf
 		echo:
 		echo http-server is missing, but somehow Node.js has not been installed yet.
-		echo Seems either the install failed, or Lolipop: Offline managed to skip it.
+		echo Seems either the install failed, or Go!Lollipop managed to skip it.
 		echo If installing directly from nodejs.org does not work, something is horribly wrong.
 		echo Please ask for help in the #support channel on Discord, or email me.
 		pause
@@ -683,8 +683,8 @@ if !HTTPSCERT_DETECTED!==n (
 	echo:
 	if not exist "server\the.crt" (
 		echo ...except it doesn't exist for some reason.
-		echo Lolipop: Offline requires this to run.
-		echo You should get a "the.crt" file from someone else, or redownload Lolipop: Offline.
+		echo Go!Lollipop requires this to run.
+		echo You should get a "the.crt" file from someone else, or redownload Go!Lollipop.
 		echo Offline has nothing left to do since it can't launch without the.crt, so it will close.
 		pause
 		exit
@@ -694,7 +694,7 @@ if !HTTPSCERT_DETECTED!==n (
 		fsutil dirty query !systemdrive! >NUL 2>&1
 		if /i not !ERRORLEVEL!==0 (
 			if !VERBOSELOLIPOP!==n ( cls )
-			echo For Lolipop: Offline to work, it needs an HTTPS certificate to be installed.
+			echo For Go!Lollipop to work, it needs an HTTPS certificate to be installed.
 			echo If you have administrator privileges, you should reopen start_lolipop.bat as Admin.
 			echo ^(it will do this automatically if you say you have admin rights^)
 			echo:
@@ -756,11 +756,11 @@ if !ADMINREQUIRED!==y (
 	echo:
 	echo Dependencies needing Admin now installed^^!
 	echo:
-	echo Lolipop: Offline no longer needs Admin rights,
+	echo Go!Lollipop no longer needs Admin rights,
 	echo please restart normally by double-clicking.
 	echo:
 	echo If you saw this from running normally,
-	echo Lolipop: Offline should continue normally after a restart.
+	echo Go!Lollipop should continue normally after a restart.
 	echo:
 	if !DRYRUN!==y (
 		echo ...you enjoying the dry run experience? Skipping closing.
@@ -784,7 +784,7 @@ echo It is recommended that you restart the computer
 echo to make sure that everything is fully working.
 echo:
 echo Would you like to restart your system before
-echo using Lolipop: Offline? [Y/n]
+echo using Go!Lollipop? [Y/n]
 echo:
 set /p RESTARTPC= Response: 
 if not '!restartpc!'=='' set restartpc=%restartpc:~0,1%
@@ -800,7 +800,7 @@ if /i "!restartpc!"=="y" (
 if /i "!restartpc!"=="n" goto continuing
 
 :continuing
-echo Continuing with Lolipop: Offline boot.
+echo Continuing with Go!Lollipop boot.
 echo:
 
 :skip_dependency_install
@@ -809,14 +809,14 @@ echo:
 :: Starting lolipop ::
 ::::::::::::::::::::::
 
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! [Loading...]
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! [Loading...]
 
 :: Close existing node apps
 :: Hopefully fixes EADDRINUSE errors??
 if !VERBOSELOLIPOP!==y (
 	if !CEPSTRAL!==n (
 		echo Closing any existing node and/or PHP apps and batch processes...
-		for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Lolipop: Offline) do (
+		for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Go!Lollipop) do (
 			if !DRYRUN!==n ( TASKKILL /FI "WINDOWTITLE eq %%i" >nul 2>&1 )
 		)
 		if !DRYRUN!==n ( TASKKILL /IM node.exe /F >nul 2>&1 )
@@ -873,10 +873,10 @@ PING -n 6 127.0.0.1>nul
 if !INCLUDEDCHROMIUM!==n (
 	if !INCLUDEDBASILISK!==n (
 		if !CUSTOMBROWSER!==n (
-			echo Opening Lolipop: Offline in your default browser...
+			echo Opening Go!Lollipop in your default browser...
 			if !DRYRUN!==n ( start http://localhost:!port! )
 		) else (
-			echo Opening Lolipop: Offline in your set browser...
+			echo Opening Go!Lollipop in your set browser...
 			echo If this does not work, you may have set the path wrong.
 			if !DRYRUN!==n ( start !CUSTOMBROWSER! http://localhost:!port! )
 		)
@@ -885,7 +885,7 @@ if !INCLUDEDCHROMIUM!==n (
 ) else (
 if !INCLUDEDCHROMIUM!==y (
 	if !INCLUDEDBASILISK!==n (
-		echo Opening Lolipop: Offline using included Chromium...
+		echo Opening Go!Lollipop using included Chromium...
 		pushd utilities\ungoogled-chromium
 		if !APPCHROMIUM!==y (
 			if !DRYRUN!==n ( start chromium.exe --user-data-dir=the_profile --app=http://localhost:!port! --allow-outdated-plugins )
@@ -897,7 +897,7 @@ if !INCLUDEDCHROMIUM!==y (
 ) else (
 if !INCLUDEDCHROMIUM!==n (
 	if !INCLUDEDBASILISK!==y (
-		echo Opening Lolipop: Offline using included Basilisk...
+		echo Opening Go!Lollipop using included Basilisk...
 		pushd utilities\basilisk\Basilisk-Portable
 		if !DRYRUN!==n ( start Basilisk-Portable.exe http://localhost:!port! )
 	)
@@ -905,20 +905,20 @@ if !INCLUDEDCHROMIUM!==n (
 )
 )
 
-echo Lolipop: Offline has been started^^! The video list should now be open.
+echo Go!Lollipop has been started^^! The video list should now be open.
 
 ::::::::::::::::
 :: Post-Start ::
 ::::::::::::::::
 
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD!
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD!
 if !VERBOSELOLIPOP!==y ( goto lolipopstarted )
 :lolipopstartedcls
 cls
 :lolipopstarted
 
 echo:
-echo Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! running
+echo Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! running
 echo A project from VisualPlugin adapted by the W:O team
 echo:
 if !VERBOSELOLIPOP!==n ( echo DON'T CLOSE THIS WINDOW^^! Use the quit option ^(0^) when you're done. )
@@ -942,7 +942,7 @@ echo Enter 6 to Update W:O using git
 echo Enter 7 to open the backup/restore tool
 echo Enter ? to open the FAQ
 echo Enter clr to clean up the screen
-echo Enter 0 to close Lolipop: Offline
+echo Enter 0 to close Go!Lollipop
 set /a _rand=(!RANDOM!*67/32768)+1
 if !_rand!==25 echo Enter things you think'll show a secret if you're feeling adventurous
 if !DEVMODE!==y (
@@ -950,7 +950,7 @@ if !DEVMODE!==y (
 	echo Developer options:
 	echo --------------------------------------
 	echo Type "amnesia" to wipe your save.
-	echo Type "restart" to restart Lolipop: Offline.
+	echo Type "restart" to restart Go!Lollipop.
 	echo Type "reload" to reload your settings and metadata.
 	echo Type "folder" to open the files.
 )
@@ -1009,10 +1009,10 @@ echo Time to choose. && goto wrapperidle
 if !INCLUDEDCHROMIUM!==n (
 	if !INCLUDEDBASILISK!==n (
 		if !CUSTOMBROWSER!==n (
-			echo Opening Lolipop: Offline in your default browser...
+			echo Opening Go!Lollipop in your default browser...
 			if !DRYRUN!==n ( start http://localhost:!port! )
 		) else (
-			echo Opening Lolipop: Offline in your set browser...
+			echo Opening Go!Lollipop in your set browser...
 			echo If this does not work, you may have set the path wrong.
 			if !DRYRUN!==n ( start !CUSTOMBROWSER! http://localhost:!port! )
 		)
@@ -1022,7 +1022,7 @@ if !INCLUDEDCHROMIUM!==n (
 ) else (
 if !INCLUDEDCHROMIUM!==y (
 	if !INCLUDEDBASILISK!==n (
-		echo Opening Lolipop: Offline using included Chromium...
+		echo Opening Go!Lollipop using included Chromium...
 		pushd utilities\ungoogled-chromium
 		if !APPCHROMIUM!==y (
 			if !DRYRUN!==n ( start chromium.exe --user-data-dir=the_profile --app=http://localhost:!port! --allow-outdated-plugins )
@@ -1035,7 +1035,7 @@ if !INCLUDEDCHROMIUM!==y (
 ) else (
 if !INCLUDEDCHROMIUM!==n (
 	if !INCLUDEDBASILISK!==y (
-		echo Opening Lolipop: Offline using included Basilisk...
+		echo Opening Go!Lollipop using included Basilisk...
 		pushd utilities\basilisk\Basilisk-Portable
 		if !DRYRUN!==n ( start Basilisk-Portable.exe http://localhost:!port! )
 		)
@@ -1094,7 +1094,7 @@ goto wrapperidle
 echo Opening the importer...
 call utilities\import.bat
 cls
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD!
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD!
 set JUSTIMPORTED=y
 goto lolipopstartedcls
 
@@ -1110,7 +1110,7 @@ echo Updating W:O...
 cls
 call update_lolipop.bat
 cls
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD!
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD!
 goto lolipopstartedcls
 
 :backupandrestore
@@ -1124,7 +1124,7 @@ goto wrapperidle
 echo Launching settings..
 call settings.bat
 cls
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD!
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD!
 goto lolipopstartedcls
 
 :youfuckoff
@@ -1152,7 +1152,7 @@ goto wrapperidle
 TASKKILL /IM node.exe /F >nul 2>&1
 if !CEPSTRAL!==n ( TASKKILL /IM php.exe /F >nul 2>&1 )
 if !VERBOSELOLIPOP!==y (
-	for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Lolipop: Offline,Server for imported voice clips TTS voice) do (
+	for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Go!Lollipop,Server for imported voice clips TTS voice) do (
 		TASKKILL /FI "WINDOWTITLE eq %%i" >nul 2>&1
 	)
 )
@@ -1281,7 +1281,7 @@ goto wrapperidle
 :: Confirmation before shutting down
 :exitlolipopconfirm
 echo:
-echo Are you sure you want to quit Lolipop: Offline?
+echo Are you sure you want to quit Go!Lollipop?
 echo Be sure to save all your work.
 echo Type Y to quit, and N to go back.
 :exitlolipopretry
@@ -1296,7 +1296,7 @@ echo You must answer Yes or No. && goto exitlolipopretry
 
 :point_extraction
 
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! [Shutting down...]
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! [Shutting down...]
 
 :: Shut down Node.js, PHP and http-server
 
@@ -1309,7 +1309,7 @@ popd
 if exist %tmp%\importserver.bat ( del %tmp%\importserver.bat )
 
 if !VERBOSELOLIPOP!==y (
-	for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Lolipop: Offline,Server for imported voice clips TTS voice) do (
+	for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Go!Lollipop,Server for imported voice clips TTS voice) do (
 		if !DRYRUN!==n ( TASKKILL /FI "WINDOWTITLE eq %%i" >nul 2>&1 )
 	)
 	if !DRYRUN!==n ( TASKKILL /IM node.exe /F >nul 2>&1 )
@@ -1351,7 +1351,7 @@ ren tmpcfg.bat config.bat
 popd
 
 :: This is where I get off.
-echo Lolipop: Offline has been shut down.
+echo Go!Lollipop has been shut down.
 if !FUCKOFF!==y ( echo You're a good listener. )
 echo This window will now close.
 echo Open start_lolipop.bat again to start W:O again.
@@ -1359,13 +1359,13 @@ if !DRYRUN!==y ( echo Go wet your run next time. )
 pause & exit
 
 :exitwithstyle
-title Lolipop: Offline v!LOLIPOP_VER!b!LOLIPOP_BLD! [Shutting down... WITH STYLE]
+title Go!Lollipop v!LOLIPOP_VER!b!LOLIPOP_BLD! [Shutting down... WITH STYLE]
 echo SHUTTING DOWN THE lolipop OFFLINE
 PING -n 3 127.0.0.1>nul
 color 9b
 echo BEWEWEWEWWW PSSHHHH KSHHHHHHHHHHHHHH
 PING -n 3 127.0.0.1>nul
-for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Lolipop: Offline,Server for imported voice clips TTS voice) do (
+for %%i in (npm start,npm,http-server,HTTP-SERVER HASN'T STARTED,NODE.JS HASN'T STARTED YET,VFProxy PHP Launcher for Go!Lollipop,Server for imported voice clips TTS voice) do (
 	if !DRYRUN!==n ( TASKKILL /FI "WINDOWTITLE eq %%i" >nul 2>&1 )
 )
 TASKKILL /IM node.exe /F >nul 2>&1
@@ -1412,7 +1412,7 @@ goto grr
 
 :configcopy
 if not exist utilities ( md utilities )
-echo :: Lolipop: Offline Config>> utilities\config.bat
+echo :: Go!Lollipop Config>> utilities\config.bat
 echo :: This file is modified by settings.bat. It is not organized, but comments for each setting have been added.>> utilities\config.bat
 echo :: You should be using settings.bat, and not touching this. Offline relies on this file remaining consistent, and it's easy to mess that up.>> utilities\config.bat
 echo:>> utilities\config.bat
@@ -1462,7 +1462,7 @@ goto returnfromconfigcopy
 
 :metacopy
 if not exist utilities ( md utilities )
-echo :: Lolipop: Offline Metadata>> utilities\metadata.bat
+echo :: Go!Lollipop Metadata>> utilities\metadata.bat
 echo :: Important useful variables that are displayed by start_lolipop.bat>> utilities\metadata.bat
 echo :: You probably shouldn't touch this. This only exists to make things easier for the devs everytime we go up a build number or something like that.>> utilities\metadata.bat
 echo:>> utilities\metadata.bat
